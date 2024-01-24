@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome!</title>
+    
+    <link rel="shortcut icon" href="images/profile-image.2jpeg.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+          
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+</head>
+<body class="light-bg">
+    <header class="light-bg">
+        <a href="https://github.com/ZarthDev">GITHUB</a>
+        <a href="https://www.instagram.com/p/C2SOus6OV-4/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==">INSTAGRAM</a>
+        <a onclick="messagePopUp()" href="#">CONTACT</a>
+        
+        <div id="btn-setBg">
+            <button onclick="SetBg()" class="btn btn-outline-danger">X</button>
+            Dark Mode
+        </div>
+    </header>
+    
+    <main>
+        <div class="light-bg" id="apresentation">
+            <img id="profile-img" onclick="ShakeImg()" src="images/profile-image.jpeg">
+            <h2>Arthur T. Martins</h2>
+            <span>Front-end Developer 🖥️</span>
+            <span>17 years 👋</span>
+        </div>
+        <div class="light-bg" id="about-me">
+            <div class="animate__animated animate__fadeInRight" id="cellphone">
+                <span>_</span>
+                <h1>Hello!</h1>
+                Me chamo Arthur e atualmente estou com 17 anos, Moro em Porto Alegre, Rio Grande do sul 🇧🇷. Me interesso em cada vez mais evoluir e aprender em minhas habilidades profissionais e pessoais visando estar cada vez mais preparado e motivado a enfrentar desafios!
+                <br><br>
+
+                <h2>Estudo e Linguagens</h2>
+                Gosto de programar desde cedo, Sempre me interessei em descobrir e desenvolver pequenos jogos em Unity, algo que cada vez mais me despertou interesse pela área, Atualmente estudo desenvolvimento full-stack em cursos da Udemy, Mas carrego boa expêriencia em Lógica de programação e criativade em desenvolvimento de projetos individuais e nível intermediário de inglês. Abaixo algumas técnologias que estudo:
+                <div id="languages">
+                    <i class="devicon-html5-plain colored"></i>
+                    <i class="devicon-css3-plain colored"></i>
+                    <i class="devicon-javascript-plain colored"></i>      
+                    <i class="devicon-bootstrap-plain colored"></i>
+                    <i class="devicon-csharp-plain colored"></i>
+                    <i class="devicon-unity-original colored"></i>
+                    <i class="devicon-php-plain colored"></i>
+                    <i class="devicon-github-original colored"></i>        
+                </div>
+            </div>
+        </div>
+        
+        <div style="clear: both;"></div>
+
+        <hr>
+
+        <div id="projects">
+            <h1>Projetos</h1>
+            <p>Aqui está a área onde mostrarei os meus projetos que desenvolvi, ou que estou desenvolvendo!</p>
+            
+            <div class="project">
+                <img src="images/Captura de tela 2023-10-22 211143.png">
+                <h3><a href="https://github.com/ZarthDev/App-Mata-Mosquito">Mata Mosquito</a></h3>
+                <p>Um jogo simples aonde Mosquitos são gerados aleatoriamente pela tela enquanto você tenta os eliminar para que sua vida não acabe! Constitui uma prática simples de javascript, html e css.</p>
+                <i class="devicon-html5-plain colored"></i>
+                <i class="devicon-css3-plain colored"></i>
+                <i class="devicon-javascript-plain colored"></i>      
+                <i class="devicon-bootstrap-plain colored"></i>
+            </div>
+            
+            <div class="project">
+                <img src="images/hobbie-selector.png">
+                <h3><a href="https://github.com/ZarthDev/Hobbie-Selector">Hobbie Selector</a></h3>
+                <p>Um site que recolhe as informações cadastradas nos formulários e os armazena no local storage do navegador, e depois recupera os mesmos dados e os exibe para o úsuario, Mostrando o nome da pessoa e o seu hobbie!</p>
+                <i class="devicon-html5-plain colored"></i>
+                <i class="devicon-css3-plain colored"></i>
+                <i class="devicon-javascript-plain colored"></i>      
+                <i class="devicon-bootstrap-plain colored"></i>
+            </div>
+            
+            <div class="project">
+                <img src="images/pokemon-game.png">
+                <h3><a href="https://github.com/ZarthDev/Pokemon-Game">Pokemon Game</a></h3>
+                <p>Um jogo criado a partir de Javascript, Html e css, onde o jogador enfrenta uma batalha de turnos controlando o Pikachu contra o charizard, utilizando programação orientada a objetos!</p>
+                <i class="devicon-html5-plain colored"></i>
+                <i class="devicon-css3-plain colored"></i>
+                <i class="devicon-javascript-plain colored"></i>      
+                <i class="devicon-bootstrap-plain colored"></i>
+            </div>
+        </div>
+
+        <hr style="clear: both;">
+        
+        <div class="light-bg" id="game">
+            <h1>Aceita um desafio?</h1>
+            <p>Que tal se distrair e se desafiar com um bom e velho Flappy bird?</p>
+            <button onclick="StartGame()" id="startBtn" class="btn btn-outline-danger">Jogar</button>
+
+            <div id="game-box">
+                <h2 id="score">CLIQUE EM JOGAR!</h2>
+                <img id="bird" src="images/flappy-bird.png">
+            </div>
+        </div>
+    </main>
+
+    <br style="clear: both;">
+    
+    <footer>
+        <span>Desenvolvido por Arthur T. Martins © - </span>
+    </footer>
+
+    <div id="contact">
+    </div>
+    
+    <script src="scripts/game.js"></script>
+    <script src="scripts/app.js"></script>
+</body>
+</html>

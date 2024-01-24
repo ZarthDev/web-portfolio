@@ -1,0 +1,630 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Bad+Script&family=Noto+Sans+Mono&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@700&display=swap');
+
+html { height: 100%; scroll-behavior: smooth;}
+
+::-webkit-scrollbar {
+    width: 20px;
+}
+  
+/* Track */
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+}
+  
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #6F23D9;
+    border: 3px solid #72727246;
+    border-radius: 5px;
+}
+
+.dark-bg {
+    background-color: #050505;
+    color: #F2F0F0;
+}
+
+.light-bg {
+    background-color: #F2F0F0;
+    color: #050505;
+}
+
+
+@media (min-width: 900px) {
+    header {
+        height: 80px;
+        font-family: 'Bad Script', cursive;
+        font-family: 'Noto Sans Mono', monospace;
+        font-size: 28px;
+        line-height: 80px;
+        text-align: center;
+    
+        border-bottom: 3px solid #72727246;
+    
+        /* From https://css.glass */
+        background: rgba(255, 255, 255, 0.3);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(5.9px);
+        -webkit-backdrop-filter: blur(5.9px);
+    }
+    
+    header > a {
+        color: #6F23D9;
+    }
+    
+    header > a:hover {
+        color: #6F23D9;
+        text-decoration: none;
+        animation: ShowLink 0.5s;
+    }
+    
+    @keyframes ShowLink {
+        0%, 100% {
+            font-size: 28px;
+        }
+    
+        50% {
+            font-size: 32px;
+        }
+    }
+    
+    #btn-setBg {
+        font-size: 16px;
+        float: right;
+        margin-right: 2%;
+    }
+    
+    /*Apresentation*/
+    #apresentation {
+        float: left;
+        width: 50%;
+        text-align: center;
+    }
+    
+    #apresentation > img {
+        width: 50%;
+        border-radius: 15%;
+        border: 3px solid #72727246;
+        margin-top: 20px;
+        -webkit-box-shadow: 10px 6px 35px -11px rgba(0,0,0,0.75);
+        -moz-box-shadow: 10px 6px 35px -11px rgba(0,0,0,0.75);
+        box-shadow: 10px 6px 35px -11px rgba(0,0,0,0.75);
+    }
+    
+    #apresentation > h2 {
+        color: #4703A6;
+        margin-top: 10px;
+        font-size: 35px;
+    }
+    
+    #apresentation > span {
+        display: block;
+        font-size: 24px;
+    }
+    
+    /*About me*/
+    #about-me {
+        width: 50%; 
+        float: right; 
+    }
+    
+    #cellphone {
+        margin-top: 20px;
+        border-radius: 25px;
+        height: 600px;
+        width: 400px;
+    
+        border: 3px solid #72727246;
+    
+        padding: 10px;
+        margin-left: 50px;
+    
+        -webkit-box-shadow: 10px 6px 35px -11px rgba(0,0,0,0.75);
+        -moz-box-shadow: 10px 6px 35px -11px rgba(0,0,0,0.75);
+        box-shadow: 10px 6px 35px -11px rgba(0,0,0,0.75);
+    }
+    
+    #cellphone > span {
+        background-color: #72727246;
+        color: #72727200;
+        display: block;
+        border-bottom-right-radius: 20px;
+        border-bottom-left-radius: 20px;
+        width: 50%;
+        margin: -10px auto;
+        margin-bottom: 10px;
+    }
+    
+    #cellphone > h1, #cellphone > h2 {
+        color: #6F23D9;
+    }
+    
+    #languages {
+        padding: 8px;
+    }
+    
+    #languages > i {
+        font-size: 30px;
+    }
+    
+    /*Projects*/
+    #projects {
+        margin-top: 20px;
+        margin-bottom: 30px;
+        padding: 30px;
+    }
+    
+    #projects > h1 {
+        color: #4703A6;
+    }
+    
+    #projects > p {
+        width: 500px;
+    }
+    
+    #projects > h1, #projects > p {
+        margin-left: 30px;
+    }
+    
+    .project {
+        text-align: center;
+        float: left;
+        width: 450px;
+        height: 400px;
+        margin: 10px 5px;
+        
+        padding: 10px;
+    
+        border: 3px solid #72727246;
+    
+        border-bottom-right-radius: 20px;
+        border-bottom-left-radius: 20px;
+    
+        -webkit-box-shadow: 10px 6px 35px -11px rgba(0,0,0,0.75);
+        -moz-box-shadow: 10px 6px 35px -11px rgba(0,0,0,0.75);
+        box-shadow: 10px 6px 35px -11px rgba(0,0,0,0.75);
+    
+    }
+    
+    .project > img {
+        width: 95%;
+        height: 50%;
+    }
+    
+    .project > h3, .project > p {
+        text-align: justify;
+        margin-top: 10px;
+    }
+    
+    .project > h3 > a {
+        color: #4703A6;
+    }
+    
+    .project > h3 > a:hover {
+        text-decoration: none;
+        color: #3b0389;
+    }
+    
+    .project > i {
+        font-size: 25px;
+    }
+    
+    /*contact message*/
+    #message {
+        text-align: center;
+        padding: 10px;
+        width: 450px;
+        height: 200px;
+        border-radius: 20px;
+        border: 3px solid #72727246;
+        margin: 200px auto;
+        position: fixed;
+        top: 50px;
+        left: 35%;
+    }
+    
+    #message > h1 {
+        color: #3b0389;
+    }
+    
+    #message > span {
+        font-size: 40px;
+        display: block;
+    }
+    
+    #message > button {
+        width: 80%;
+        margin-top: 20px;
+    }
+    
+    /*Game*/
+    #game {
+        height: 500px;
+        margin-bottom: 100px;
+        text-align: center;
+    }
+    
+    #game > h1 {
+        color: #6F23D9;
+    }
+    
+    #game > p {
+        font-size: 24px;
+    }
+    
+    #game > button {
+        width: 50%;
+    }
+    
+    #game-box {
+        width: 800px;
+        height: 400px;
+        border: 3px solid #72727246;
+        border-radius: 2px;
+        margin: 20px auto;
+        background-image: url(../images/flappy-bird-bg.gif);
+        background-size: 550px;
+    }
+    
+    #game-box > h2 {
+        font-family: 'Pixelify Sans', sans-serif;
+        padding: 10px;
+        color: #F2F0F0;
+        float: left;
+    }
+    
+    #bird {
+        width: 70px;
+        margin-top: 200px;
+        margin-left: 200px;
+        float: left;
+    }
+    
+    .pipe-long {
+        float: right;
+    }
+    
+    .pipe-long > img {
+        position: absolute;
+        margin-top: 150px;
+        height: 250px;
+        animation: pipe 9s;
+    }
+    
+    .jump {
+        animation: jump 2s;
+    }
+    
+    @keyframes jump {
+        0%, 100% {
+            margin-top: 200px;
+            transform: rotateZ(0deg);
+        }
+        
+        50% {
+            margin-top: 80px;
+            transform: rotateZ(-360deg);
+        }
+    }
+    
+    @keyframes pipe {
+        0% {
+            transform: translateX(-100%);
+        }    
+    
+        100% {
+            transform: translateX(-1120%);
+        }
+    }
+    
+    /*footer*/
+    footer {
+        line-height: 80px;
+        font-size: 23px;
+        padding-left: 20px;
+        height: 85px;
+        border-top: 3px solid #72727246;
+    }
+    
+    footer > span {
+        color: #4703A6;
+    }
+
+}
+
+@media only screen and (max-width: 896px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    header {
+        height: 80px;
+        width: 105%;
+        font-family: 'Bad Script', cursive;
+        font-family: 'Noto Sans Mono', monospace;
+        font-size: 23px;
+        line-height: 80px;
+        text-align: center;
+    
+        border-bottom: 3px solid #72727246;
+    
+        /* From https://css.glass */
+        background: rgba(255, 255, 255, 0.3);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(5.9px);
+        -webkit-backdrop-filter: blur(5.9px);
+    }
+    
+    header > a {
+        color: #6F23D9;
+    }
+
+    header > a:hover {
+        color: #6F23D9;
+        text-decoration: none;
+    }
+
+    /*Apresentation*/
+    #apresentation {
+        width: 80%;
+        margin: 80px auto;
+        text-align: center;
+    }
+    
+    #apresentation > img {
+        width: 100%;
+        border-radius: 15%;
+        border: 3px solid #72727246;
+        margin-top: 50px;
+        -webkit-box-shadow: 10px 6px 35px -11px rgba(0,0,0,0.75);
+        -moz-box-shadow: 10px 6px 35px -11px rgba(0,0,0,0.75);
+        box-shadow: 10px 6px 35px -11px rgba(0,0,0,0.75);
+    }
+    
+    #apresentation > h2 {
+        color: #4703A6;
+        margin-top: 10px;
+        font-size: 35px;
+    }
+    
+    #apresentation > span {
+        display: block;
+        font-size: 24px;
+    }
+    
+    /*About me*/
+    #about-me {
+        width: 50%;
+    }
+    
+    #cellphone {
+        margin-top: 20px;
+        border-radius: 25px;
+        height: 800px;
+        width: 300px;
+    
+        border: 3px solid #72727246;
+    
+        padding: 10px;
+        margin-left: 50px;
+    
+        -webkit-box-shadow: 10px 6px 35px -11px rgba(0,0,0,0.75);
+        -moz-box-shadow: 10px 6px 35px -11px rgba(0,0,0,0.75);
+        box-shadow: 10px 6px 35px -11px rgba(0,0,0,0.75);
+    }
+    
+    #cellphone > span {
+        background-color: #72727246;
+        color: #72727200;
+        display: block;
+        border-bottom-right-radius: 20px;
+        border-bottom-left-radius: 20px;
+        width: 50%;
+        margin: -10px auto;
+        margin-top: -10px;
+        margin-bottom: 10px;
+    }
+    
+    #cellphone > h1, #cellphone > h2 {
+        color: #6F23D9;
+    }
+    
+    #languages {
+        padding: 8px;
+    }
+    
+    #languages > i {
+        font-size: 30px;
+    }   
+
+    #btn-setBg {
+        font-size: 16px;
+    }
+
+    /*projects*/
+    #projects {
+        margin-top: 20px;
+        margin-bottom: 30px;
+        padding: 30px;
+    }
+    
+    #projects > h1 {
+        color: #4703A6;
+    }
+    
+    #projects > p {
+        width: 350px;
+    }
+    
+    #projects > h1, #projects > p {
+        margin-left: 10px;
+    }
+    
+    .project {
+        text-align: center;
+        float: left;
+        width: 350px;
+        height: 550px;
+        margin: 10px 5px;
+        
+        padding: 10px;
+    
+        border: 3px solid #72727246;
+    
+        border-bottom-right-radius: 20px;
+        border-bottom-left-radius: 20px;
+    
+        -webkit-box-shadow: 10px 6px 35px -11px rgba(0,0,0,0.75);
+        -moz-box-shadow: 10px 6px 35px -11px rgba(0,0,0,0.75);
+        box-shadow: 10px 6px 35px -11px rgba(0,0,0,0.75);
+    
+    }
+    
+    .project > img {
+        width: 95%;
+        height: 50%;
+    }
+    
+    .project > h3, .project > p {
+        text-align: justify;
+        margin-top: 10px;
+    }
+    
+    .project > h3 > a {
+        color: #4703A6;
+    }
+    
+    .project > h3 > a:hover {
+        text-decoration: none;
+        color: #3b0389;
+    }
+    
+    .project > i {
+        font-size: 25px;
+    }
+
+    /*message*/  
+    #message {
+        text-align: center;
+        padding: 10px;
+        width: 90%;
+        height: 200px;
+        border-radius: 20px;
+        border: 3px solid #72727246;
+        margin: 200px auto;
+        position: fixed;
+        top: 50px;
+        left: 20px;
+    }
+    
+    #message > h1 {
+        color: #3b0389;
+    }
+    
+    #message > span {
+        font-size: 30px;
+        display: block;
+    }
+    
+    #message > button {
+        width: 80%;
+        margin-top: 20px;
+    }
+    
+    /*Game*/
+    #game {
+        height: 500px;
+        margin-bottom: 100px;
+        text-align: center;
+    }
+    
+    #game > h1 {
+        color: #6F23D9;
+    }
+    
+    #game > p {
+        font-size: 20px;
+    }
+    
+    #game > button {
+        width: 50%;
+    }
+    
+    #game-box {
+        width: 380px;
+        height: 400px;
+        border: 3px solid #72727246;
+        border-radius: 2px;
+        margin: 20px auto;
+        background-image: url(../images/flappy-bird-bg.gif);
+        background-size: 550px;
+    }
+    
+    #game-box > h2 {
+        font-family: 'Pixelify Sans', sans-serif;
+        padding: 10px;
+        color: #F2F0F0;
+        float: left;
+    }
+    
+    #bird {
+        width: 70px;
+        margin-top: 200px;
+        margin-left: -50px;
+        float: left;
+    }
+    
+    .pipe-long {
+        float: right;
+    }
+    
+    .pipe-long > img {
+        position: absolute;
+        margin-top: 150px;
+        height: 250px;
+        animation: pipe 9s;
+    }
+    
+    .jump {
+        animation: jump 2s;
+    }
+    
+    @keyframes jump {
+        0%, 100% {
+            margin-top: 200px;
+            transform: rotateZ(0deg);
+        }
+        
+        50% {
+            margin-top: 80px;
+            transform: rotateZ(-360deg);
+        }
+    }
+    
+    @keyframes pipe {
+        0% {
+            transform: translateX(-100%);
+        }    
+    
+        100% {
+            transform: translateX(-1120%);
+        }
+    }
+    
+    /*footer*/
+    footer {
+        line-height: 80px;
+        font-size: 20px;
+        padding-left: 20px;
+        height: 85px;
+        width: 105%;
+        border-top: 3px solid #72727246;
+    }
+    
+    footer > span {
+        color: #4703A6;
+    }
+}
