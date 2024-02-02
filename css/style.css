@@ -230,9 +230,10 @@ html { height: 100%; scroll-behavior: smooth;}
         color: #3b0389;
     }
     
-    #message > span {
+    #message > a {
         font-size: 40px;
         display: block;
+        color: #6F23D9;
     }
     
     #message > button {
@@ -524,9 +525,10 @@ html { height: 100%; scroll-behavior: smooth;}
         color: #3b0389;
     }
     
-    #message > span {
+    #message > a {
         font-size: 30px;
         display: block;
+        color: #6F23D9;
     }
     
     #message > button {

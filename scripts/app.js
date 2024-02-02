@@ -42,11 +42,12 @@ function messagePopUp ( ) {
         let message = document.createElement('div');
     
         let messageTittle = document.createElement('h1');
-        let messageSpan = document.createElement('span');
+        let messageSpan = document.createElement('a');
         let messageButton = document.createElement('button');
     
         messageTittle.innerHTML = 'CONTATO:';
         messageSpan.innerHTML = '+55 51 98692-8804';
+        messageSpan.href = "https://wa.me/5551986928804";
         messageButton.innerHTML = 'Fechar';
     
         messageButton.className = 'btn btn-outline-danger';

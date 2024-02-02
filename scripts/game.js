@@ -1,3 +1,20 @@
+class SaveGame {
+    constructor ( ) {
+        this.points = 0;
+        if ( localStorage.getItem('score') === null ) {
+            localStorage.setItem('score', this.points);
+        }
+    }
+
+    Save ( score ) {
+        localStorage.setItem('score', score);
+    }
+
+    ShowScore ( ) {
+        return localStorage.getItem('score');
+    } 
+}
+
 class Bird {
     constructor () {
         this.points = 0;
@@ -18,6 +35,7 @@ class Bird {
 }
 
 let bird = new Bird();
+let saveControl = new SaveGame();
 
 
 let screenSize = window.innerWidth;
@@ -65,9 +83,14 @@ function StartGame ( ) {
 
                 setTimeout (function ( ) {
                     if (bird.isJumping != true) {
+
+                        if (bird.points > saveControl.ShowScore()) {
+                            saveControl.Save(bird.points);
+                        }
+
                         scoreText.innerHTML = `VOCÊ PERDEU!
                         CLIQUE AQUI 
-                        PARA REINICIAR!`;
+                        PARA REINICIAR! <br> SEU RECORDE FOI: ${saveControl.ShowScore()}`;
     
                         startGame = false; //lose game
                         pipe.remove();
